@@ -5,12 +5,12 @@ import { deletUser } from "../data/deleteUser";
 import { Link } from "react-router-dom";
 import { updateUser } from "../data/updateUser";
 import { useState, useContext } from "react";
-import { UserContext } from "../src/contextRoot.jsx";
+
 export const loader = () => getUsers();
 
 const Users = () => {
 	const userData = useLoaderData();
-	const { user, setUserId } = useContext(UserContext);
+	
 
 	const [editingUser, setEditingUser] = useState({});
 	const [userName, setUserName] = useState("");
